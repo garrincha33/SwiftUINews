@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - NewsResponse
-//step 1 - create a struct using https://app.quicktype.io/ from the apihttps://lil.software/api/
+//create a struct using https://app.quicktype.io/ from the apihttps://lil.software/api/
 
 ///update the articleDescription = "description" in coding keys, description is a key word so the coding
 ///key resolves this issue, also we need to make NewsResponse Identifiable

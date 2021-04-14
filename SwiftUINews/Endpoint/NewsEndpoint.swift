@@ -7,7 +7,7 @@
 
 import Foundation
 
-//step 2 create an endpoint using a protocol builder, protocols are good for reusability
+//create an endpoint using a protocol builder, protocols are good for reusability
 protocol APIBuilder {
     var urlRequest: URLRequest { get }
     var baseURL: URL { get }
@@ -17,7 +17,7 @@ protocol APIBuilder {
 enum NewsAPI {
     case getNews
 }
-//step 3 we can now define our endPoint with an extension, all we are doing here is building
+//we can now define our endPoint with an extension, all we are doing here is building
 //the API that we are accessing
 extension NewsAPI: APIBuilder {
     var baseURL: URL {
