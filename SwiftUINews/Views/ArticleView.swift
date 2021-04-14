@@ -14,7 +14,7 @@ struct ArticleView: View {
     var body: some View {
         //MARK: Article Image
         HStack {
-            if let imageURL = article.image,
+            if let imageURL = article.urlToImage,
                let url = URL(string: imageURL) {
                 URLImage(url: url,
                          options: URLImageOptions(
@@ -39,7 +39,7 @@ struct ArticleView: View {
                 Text(article.title ?? "")
                     .foregroundColor(.black)
                     .font(.system(size: 18, weight: .semibold))
-                Text(article.source ?? "N/A")
+                Text(article.author ?? "N/A")
                     .foregroundColor(Color.gray)
                     .font(.footnote)
             }

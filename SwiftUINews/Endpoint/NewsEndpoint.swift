@@ -23,13 +23,16 @@ extension NewsAPI: APIBuilder {
     var baseURL: URL {
         switch self {
         case .getNews:
-            return URL(string: "https://api.lil.software")!
+            return URL(string: "https://newsapi.org/v2/top-headlines?country=us&")!
         }
     }
     var path: String {
-        return "/news"
+        return "apiKey=199e8836528a49c1848b82bd93e26341"
     }
+    //step 2 updated URL REquest with absoulte string and printing test url 
     var urlRequest: URLRequest {
-        return URLRequest(url: self.baseURL.appendingPathComponent(self.path))
-    }
+            guard let url = URL(string: self.baseURL.absoluteString.appending(self.path)) else { fatalError("no url") }
+        print("\(url)")
+            return URLRequest(url: url)
+        }
 }
