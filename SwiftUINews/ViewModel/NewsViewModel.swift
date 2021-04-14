@@ -31,7 +31,6 @@ class NewsViewModelImplement: ObservableObject, NewsViewModel {
     func getArticles() {
         self.state = .loading ///make sure we are loading first
         let cancellable = service.request(from: .getNews)
-            //step 3 add a weak self
             .sink { [weak self] res in
                 guard let self = self else { return }
                 switch res {

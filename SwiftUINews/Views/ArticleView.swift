@@ -7,7 +7,6 @@
 
 import SwiftUI
 import URLImage
-//step 5 create article view
 struct ArticleView: View {
     
     let article: Article
@@ -50,13 +49,10 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        //step 5 add in dummy data
         ArticleView(article: Article.dummyData)
             .previewLayout(.sizeThatFits)
     }
 }
-
-//step 4 create a placeholeer image view
 struct PlaceholderImageView: View {
     var body: some View {
         Image(systemName: "photo.fill")

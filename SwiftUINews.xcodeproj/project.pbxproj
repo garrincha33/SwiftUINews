@@ -19,6 +19,7 @@
 		1B0881922626EBCC007A7734 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0881912626EBCC007A7734 /* NewsViewModel.swift */; };
 		1B0881962626F062007A7734 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B0881952626F062007A7734 /* URLImage */; };
 		1B0881992626F50F007A7734 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0881982626F50F007A7734 /* ArticleView.swift */; };
+		1B08819C26270218007A7734 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08819B26270218007A7734 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1B08818D2626EB33007A7734 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		1B0881912626EBCC007A7734 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		1B0881982626F50F007A7734 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		1B08819B26270218007A7734 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				1B08817526263BB6007A7734 /* HomeView.swift */,
 				1B0881982626F50F007A7734 /* ArticleView.swift */,
+				1B08819B26270218007A7734 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				1B08817626263BB6007A7734 /* HomeView.swift in Sources */,
 				1B08816526263AD1007A7734 /* SwiftUINewsApp.swift in Sources */,
 				1B08817C2626CAF9007A7734 /* NewsResponse.swift in Sources */,
+				1B08819C26270218007A7734 /* ErrorView.swift in Sources */,
 				1B0881852626D57F007A7734 /* APIError.swift in Sources */,
 				1B0881812626CCD1007A7734 /* NewsEndpoint.swift in Sources */,
 				1B0881992626F50F007A7734 /* ArticleView.swift in Sources */,
