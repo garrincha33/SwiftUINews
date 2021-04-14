@@ -49,5 +49,11 @@ class NewsViewModelImplement: ObservableObject, NewsViewModel {
         //insert into our set, next load https://github.com/dmytro-anokhin/url-image into packageMa
         self.cancellables.insert(cancellable)
     }
+    
+    func printGetRequest() {
+        for articles in articles {
+            print("TESTING GET - \(articles)")
+        }
+    }
 }
 

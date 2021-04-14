@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct HomeView: View {
+    //step 3 add reference to view model
+    @StateObject var viewModel = NewsViewModelImplement(service: NewsServiceImplement())
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //step 4 create a group and attach onAppear call view model
+        Group {
+            switch viewModel.state {
+            case .loading:
+                ProgressView()
+            case .failed(let error):
+                ErrorView(error: error, handler: viewModel.getArticles)
+            case .success(let articles):
+                NavigationView {
+                    List(articles) {item in
+                        ArticleView(article: item)
+                    }
+                    .navigationTitle(Text("News"))
+                }
+            }
+        }.onAppear(perform: viewModel.getArticles)
+        
     }
 }
 

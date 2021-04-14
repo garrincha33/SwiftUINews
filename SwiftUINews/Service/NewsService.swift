@@ -32,7 +32,7 @@ struct NewsServiceImplement: NewsService {
                 }
                 if(200...299).contains(response.statusCode) {
                     let jsonDecoder = JSONDecoder()
-                    jsonDecoder.dateDecodingStrategy = .iso8601
+                    jsonDecoder.dateDecodingStrategy = .millisecondsSince1970
                     //decode objects
                     return Just(data)
                         .decode(type: NewsResponse.self, decoder: jsonDecoder)
