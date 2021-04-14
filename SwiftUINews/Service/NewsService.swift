@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//step 1 import combine
 import Combine
 ///return a pubblisher and listen in our view model for what we are publishing
 ///anypublisher allows us to subscribe and listen, similiar to result, we subscribe to whats published
@@ -14,7 +13,6 @@ import Combine
 protocol NewsService {
     func request(from endpoint: NewsAPI) -> AnyPublisher<NewsResponse, APIError>
 }
-//step 2 create struct news service
 /// access the singleton shared within URLSession, dataTaskPublisher listens to the results
 /// recive - on the main thread, when working with APIS as we dont want any blocking or UI out of date
 /// mapError - map the error if something goes wrong
