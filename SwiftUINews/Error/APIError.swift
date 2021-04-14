@@ -7,14 +7,14 @@
 
 import Foundation
 
-//step 4 create custom errors using an enum
+//create custom errors using an enum
 enum APIError: Error {
     case decodingError
     case errorCode(Int)
     case unknown
 }
 
-//step 5 use an extension to acutally define the cases
+//use an extension to acutally define the cases
 extension APIError: LocalizedError {
     var errorDescription: String? {
         switch self {
