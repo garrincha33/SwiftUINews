@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//step 1 create an enum for managing the 3 states that our app could possibly be in
+//create an enum for managing the 3 states that our app could possibly be in
 enum ResultState {
     case loading ///app is loading using a spinner
     case success(content: [Article]) /// success we can now display available articles
