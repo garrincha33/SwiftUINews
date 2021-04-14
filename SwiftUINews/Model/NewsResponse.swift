@@ -17,7 +17,6 @@ import Foundation
 struct NewsResponse: Codable {
     let articles: [Article]
 }
-//step 1 fix optionals, if article unavailable we wont crash
 // MARK: - Article
 struct Article: Codable, Identifiable {
     let id = UUID()
@@ -34,7 +33,6 @@ struct Article: Codable, Identifiable {
         case image, date
     }
 }
-//step 2 create some dummy data
 extension Article {
     static var dummyData: Article {
         .init(author: "Erin Erin", url: "https://www.cbsnews.com/live-updates/derek-chauvin-trial-george-floyd-death-2021-04-13/", source: "CBS News",
